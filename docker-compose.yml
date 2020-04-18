@@ -1,0 +1,18 @@
+version: '3'
+services:
+  octorpki:
+    build: ./octorpki
+    ports:
+      - '8081:8080'
+    volumes:
+      - octorpki-storage:/cache
+  gortr:
+    image: cloudflare/gortr:latest
+    ports:
+      - '8282:8282'
+      - '8283:8283'
+    command: -cache http://octorpki:8080/output.json -verify=false -metrics.addr :8283
+    depends_on:
+      - octorpki
+volumes:
+  octorpki-storage:
