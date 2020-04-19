@@ -1,12 +1,16 @@
 version: '3'
 services:
   octorpki:
-    image: techfutures/rpki-validator:latest
+    container_name: octorpki
+    image: cloudflare/octorpki:latest
     ports:
       - '8080:8080'
     volumes:
-      - octorpki-storage:/cache
+      - octorpki-cache:/cache
+      - octorpki-tals:/tals
+    restart: always
   gortr:
+    container_name: gortr
     image: cloudflare/gortr:latest
     ports:
       - '8282:8282'
@@ -14,5 +18,7 @@ services:
     command: -cache http://octorpki:8080/output.json -verify=false -metrics.addr :8283
     depends_on:
       - octorpki
+    restart: always
 volumes:
-  octorpki-storage:
+  octorpki-cache:
+  octorpki-tals:
