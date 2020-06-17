@@ -1,9 +1,9 @@
 # RPKI Validator
-## RPKI Validator based on CloudFlare GoRTR and OctoRPKI
+### RPKI Validator based on CloudFlare GoRTR and OctoRPKI
 
 A quick a simple docker compose we use internally to run CloudFlare RPKI Validator, both containers are built from the official CloudFlare images. See [resources section](#resources) for links to more info.
 
-### Run with Docker
+## Run with Docker
 
 Clone the repo:
 
@@ -76,7 +76,7 @@ afrinic.tal  apnic.tal  arin.tal  lacnic.tal  ripe.tal
 
 
 
-### Usage Example
+## Usage Example
 #### Configure on Juniper
 
 Configure a session to the RTR server (assuming it runs on `10.0.0.1:8282`)
@@ -157,6 +157,6 @@ Prefix                 Origin-AS Session                                 State  
 1.1.1.0/24-24              13335 10.0.0.1                                valid
 ```
 
-### Resources
+## Resources
 - https://github.com/cloudflare/cfrpki
 - https://github.com/cloudflare/gortr
