@@ -74,7 +74,13 @@ $ /var/lib/docker/volumes/tfi_octorpki-tals/_data# ls
 afrinic.tal  apnic.tal  arin.tal  lacnic.tal  ripe.tal
 ```
 
+#### Viewing Metrics
 
+It may take a few minutes for all the ROA to be generated, but once it's done it can be viewed at `http://10.0.0.01:8080/output.json`
+
+OctoRPKI Prometheus Metrics: `http://10.0.0.1:8080/metrics`
+
+GoRTR Prometheus Metrics: `http://10.0.0.1:8283/metrics`
 
 ## Usage Example
 #### Configure on Juniper
