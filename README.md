@@ -33,7 +33,7 @@ All the TALs files are included in the repo except ARIN.
 You can download the RFC 7730 format at the following address: https://www.arin.net/resources/rpki/tal.html and drop it in the TALs data folder.
 
 ```
-$ wget -O arin.tal https://www.arin.net/resources/rpki/tal.html
+$ wget https://www.arin.net/resources/manage/rpki/arin.tal
 ```
 
 Check volume name and mountpoint:
