@@ -1,7 +1,7 @@
 # RPKI Validator
 ### RPKI Validator based on CloudFlare GoRTR and OctoRPKI
 
-A quick a simple docker compose we use internally to run CloudFlare RPKI Validator, both containers are built from the official CloudFlare images. See [resources section](#resources) for links to more info.
+A quick and simple docker compose we use internally to run CloudFlare RPKI Validator, both containers are built from the official CloudFlare images. See [resources section](#resources) for links to more info.
 
 ## Run with Docker
 
